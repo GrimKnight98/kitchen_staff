@@ -1,0 +1,7 @@
+{
+  "name": "kitchen_staff",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
