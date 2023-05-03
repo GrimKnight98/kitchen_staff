@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>test2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">test2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of [1,2,3,4,5,6]">
+        <ion-card color="danger">
+          <ion-card-header>
+            <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+            <ion-card-title>Awesome Title</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light">
+                <ion-label>First Accordion</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">
+                <ion-item *ngFor="let item of [1,2,3]">
+                  <ion-label>
+                    <h2>Item</h2>
+                    <p>text</p>
+                  </ion-label>
+                </ion-item>
+              </div>
+            </ion-accordion>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4" *ngFor="let item of [1,2,3]">
+        <ion-card color="warning">
+          <ion-card-header>
+            <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+            <ion-card-title>Awesome Title</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Awesome content
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
