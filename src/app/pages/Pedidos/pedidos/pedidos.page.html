@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>pedidos</ion-title>
+    <ion-title>Pedidos Actuales</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">pedidos</ion-title>
+      <ion-title size="large">Pedidos</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -17,7 +17,8 @@
         <ion-accordion-group [multiple]="true" [value]="['first']">
           <ion-accordion value="first">
             <ion-item slot="header" color="light">
-              <ion-label>Pedidos Emitidos</ion-label>
+              <ion-icon slot="start" name="alert-circle-outline" color="danger"></ion-icon>
+              <ion-label color="danger">Pedidos Emitidos</ion-label>
             </ion-item>
             <div class="ion-padding" slot="content">
 
@@ -48,9 +49,10 @@
                       <ion-card-content>
                         <ion-list>
                           <ion-list-header>
-                            <ion-label>ORDER ITEMS</ion-label>
+                            <ion-label>Alimentos</ion-label>
                           </ion-list-header>
                             <ion-item *ngFor="let item of pedido.articulos_orden">
+                              <ion-icon slot="start" name="restaurant-outline"></ion-icon>
                               <ion-label>
                                 <h2>Name:{{item.item_id}}</h2>
                                 <h3>Quantity: {{item.cantidad}}</h3>
@@ -65,6 +67,17 @@
               </ion-grid>
 
             </div>
+          </ion-accordion>
+        </ion-accordion-group>
+      </ion-col>
+      <ion-col size="12">
+        <ion-accordion-group [multiple]="true" [value]="['first']">
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-icon slot="start" name="sync-outline" color="warning"></ion-icon>
+              <ion-label color="warning">En Proceso</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">First Content</div>
           </ion-accordion>
         </ion-accordion-group>
       </ion-col>
