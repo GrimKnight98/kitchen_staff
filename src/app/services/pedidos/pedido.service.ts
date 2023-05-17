@@ -13,4 +13,7 @@ export class PedidoService {
   getPedidos():Observable<Pedidos>{
     return this.http.get<Pedidos>('https://apex.oracle.com/pls/apex/wksp_testcurso1998/kitchen_staff/pedidos');
   }
+  updatePedidos(body:any, options:any){
+    return this.http.put('https://apex.oracle.com/pls/apex/wksp_testcurso1998/kitchen_staff/pedidos', body, options);
+  }
 }
